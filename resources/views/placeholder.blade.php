@@ -17,7 +17,6 @@
     -->
     <div class="flex h-screen">
         <!--
-
           Show/hide based on menu state:
             Visible when: isOpen
             Clicking the button toggles isOpen state
@@ -28,10 +27,11 @@
           Leaving: "transition-opacity ease-linear duration-300"
             From: "opacity-100"
             To: "opacity-0"
-
         -->
         <button class="fixed inset-0 bg-opacity-50 z-40 lg:hidden">
         </button>
+
+        {{-- Sidebar Desktop --}}
         <div class="hidden lg:block lg:relative w-64">
             <div class="bg-gray-900 text-white h-full p-4 relative">
                 <div class="flex items-center mb-8">
@@ -45,6 +45,7 @@
                 <!-- Navigation Menu -->
                 <!-- Active Button: bg-gray-700 text-white, Default: text-gray-300 hover:bg-gray-700 hover:text-white -->
                 <nav class="space-y-2">
+                    {{-- <x-nav_link href=""></x-nav_link> --}}
                     <a href="#"
                         class="flex items-center px-4 py-2 rounded-lg transition-colors duration-200 text-gray-300 hover:bg-gray-700 hover:text-white group">
                         <i class="fas fa-tachometer-alt text-lg flex-shrink-0 group-hover:scale-110 transition-transform duration-200"></i>
@@ -156,6 +157,7 @@
                 </div>
             </div>
         </div>
+
         <div class="flex-1 overflow-auto">
             <header class="bg-white shadow-sm border-b border-gray-200 px-6 py-4">
                 <div class="flex items-center justify-between">
@@ -185,6 +187,7 @@
                         <li class="text-gray-800 font-medium">Data Siswa</li>
                     </ol>
                 </nav>
+                
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
                     <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
                         <div class="flex items-center">
